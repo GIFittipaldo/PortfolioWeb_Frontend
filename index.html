@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio web</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/estilos.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.1/chart.min.js"></script>
+</head>
+<body>
+    <header>
+        <nav class="contenedor bg-primary">
+            <img src="./Imagenes/Logo_AP.png" alt="Logo Argentina Programa" class="logoap">
+            <div>
+                <a href="" class="nav-link"><i class="navbar-text fa-brands fa-facebook-square fa-2x"></i></a>
+                <a href="" class="nav-link"><i class="navbar-text fa-brands fa-instagram-square fa-2x pe-5"></i></a>
+                <button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#modal-login">Iniciar sesión</button> <!--boton que lanza un modal para el login-->
+            </div>
+            <div class="modal fade" id="modal-login"> <!--creacion del modal / cuadro de login-->
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h2 class="modal-title">Iniciar sesión</h2>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                        </div>
+                        <div class="modal-body">                            
+                                <div class="input-group mt-4 mb-3">
+                                    <span class="input-group-text"><i class="fa-solid fa-user"></i></span>
+                                    <input type="text" class="form-control" placeholder="Nombre de usuario" aria-label="Username" aria-describedby="basic-addon1">
+                                </div> 
+                                <div class="input-group mb-4">
+                                    <span class="input-group-text"><i class="fa-solid fa-key"></i></span>
+                                    <input type="text" class="form-control" placeholder="Contraseña" aria-label="Username" aria-describedby="basic-addon1">
+                                </div>                           
+                        </div>
+                        <div class="modal-footer">
+                            <button class="btn btn-success">Enviar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <img src="./Imagenes/Banner.png" class="img-fluid" alt="Banner creado a base de un diseño propiedad de DesEYEns / Freepik">
+    </header>
+    <section>
+        <div class="AcercaDeMi">
+            <div class="Avatar">
+                <img src="./Imagenes/Perfil.jpg" alt="Foto de perfil" class="img-fluid rounded-circle border border-3">
+                <p>Germán Ignacio Fittipaldo</p>
+                <hr>
+                <p>31 años</p>
+            </div>          
+            <div class="col-sm-12 col-md-9 ps-3 tarjeta1">
+                <div class="card" id="tarjeta">
+                    <div class="card-header text-center">
+                        <h4>Acerca de mi.</h4>
+                    </div>
+                    <div class="card-body">
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium veritatis sequi enim delectus quam aperiam, omnis ab vel, et a temporibus labore aliquid, quas adipisci voluptas non soluta nemo accusantium.</p>
+                    </div>               
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="secciones">
+        <div class="row border border-top border-bottom">
+            <div class="col-sm-6 col-md-3 position-relative">
+                <img src="./Imagenes/Logo_BA.png" alt="Logo GCBA" class="d-none d-sm-block position-absolute img-fluid top-50 start-50 translate-middle" id="gcba">
+            </div>
+            <div class="col-sm-6 col-md-9 ps-3">
+                <h4 class="pt-4 pb-4 text-center">Experiencia laboral.</h4>
+                <h5>Administración pública - GCABA</h5>
+                <p>Auxiliar de planeamiento y administración de recursos humanos.</p>
+                <hr>
+                <div class="row">
+                    <p>Ingreso en 2017: Tareas administrativas hasta la actualidad relacionadas al control del presentismo del personal, mantención de sus legajos, asesoramiento y gestion de licencias administrativas.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="secciones">
+        <div class="row border border-top border-bottom">
+            <div class="col-sm-6 col-md-3 position-relative">
+                <img src="./Imagenes/Logo_UVQ.png" alt="Logo UVQ" class="d-none d-sm-block position-absolute img-fluid top-50 start-50 translate-middle" id="uvq">
+            </div>
+            <div class="col-sm-6 col-md-9 ps-3">
+                <h4 class="pt-4 pb-4 text-center">Nivel educativo y capacitaciones.</h4>
+                <h5>Estudios universitarios en curso.</h5>
+                <p>Universidad Nacional de Quilmes.<hr>Licenciatura en administración.</p>
+            </div>
+            <div class="row pt-5">
+                <div class="col-sm-6 col-md-3 position-relative">
+                    <img src="./Imagenes/Logo_Foetra.png" alt="Logo Coderhouse" class="d-none d-sm-block position-absolute img-fluid top-50 start-50 translate-middle" id="foetra">
+                </div>
+                <div class="col-sm-6 col-md-9 ps-3">
+                    <h5 class="pb-3">Capacitaciones.</h5>
+                    <h6>Foetra.</h6><hr><p>Operador de sistemas GNU/Linux. (2011)</p>
+                </div>
+            </div>
+            <div class="row pt-4">
+                <div class="col-sm-6 col-md-3 position-relative">
+                    <img src="./Imagenes/Logo_Coder2.png" alt="Logo Coderhouse" class="d-none d-sm-block position-absolute img-fluid top-50 start-50 translate-middle" id="coder">
+                </div>
+                <div class="col-sm-6 col-md-9 ps-3">
+                    <h6>Coderhouse.</h6><hr><ol><li>Community manager y publicidad en redes. (2022)</li><li>Publicidad en redes avanzado. (2022)</li><li>Growth marketing. (2022)</li></ol>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="secciones">
+        <div class="container row pt-4 border-bottom">
+            <div class="cos-xs-9 col-lg-7 offset-xs-3 offset-lg-5">
+                <h4 class="text-center pt-4 pb-4">Habilidades blandas.</h4>
+            </div>
+            <div class="col-xs-12 col-lg-9 offset-lg-3">
+                <canvas class="pb-3" id="barras" width="600" height="350" style="display: block; box-sizing: border-box; height: 350px; width: 600px;"></canvas>
+            </div>
+        </div>
+    </section>
+    <section class="secciones">
+        <div class="cos-xs-9 col-lg-10 offset-xs-3 offset-lg-2">
+            <h4 class="text-center pt-5 pb-3">Proyectos.</h4>
+        </div>
+        <div class="card offset-3 pb-5" style="max-width: 750px">
+            <div class="row g-0">
+                <div class="col-4">
+                    <img src="./Imagenes/Screen_portfolio.JPG" alt="Captura de portfolio" class="img-fluid rounded-start">
+                </div>
+                <div class="col-8">
+                    <div class="card-body">
+                        <h5 class="card-title">Portfolio web - Argentina programa</h5>
+                        <p class="card-text">Proyecto de portfolio web creado como proyecto final integrador del plan Argentina programa etapa #YoProgramo <br><a href="www.miportfolio.com.ar">www.miportfolio.com.ar</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="bg-primary d-flex justify-content-end align-items-center text-white" style="min-height: 10vh;">
+        <p class="pe-5">Contacto: miemail@prueba.com.ar</p>
+    </footer>
+
+      <!--Script de grafico-->
+      <script src="js/graficos.js"></script>
+      <!--Script JS bootstrap-->
+      <script src="js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
